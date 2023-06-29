@@ -1,33 +1,53 @@
-# Project
+# Faithful and Controllable Dialogue Response Generation with Dataflow Transduction and Constrained Decoding
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-As the maintainer of this project, please make a few updates:
+<img align="right" src="https://avatars2.githubusercontent.com/u/9585815?s=200&v=4" width="18%">
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+This repository contains code and instructions for reproducing the experiments in the paper
+[The Whole Truth and Nothing But the Truth: Faithful and Controllable Dialogue Response Generation with Dataflow Transduction and Constrained Decoding](https://arxiv.org/abs/2209.07800) (Findings of ACL 2023).
 
-## Contributing
+![Approach Overview](./assets/dataflow2text.png?raw=true)
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+## Introduction (WIP)
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+There are two key components in our framework: **dataflow transduction** and **constrained decoding**,
+implemented by the [dataflow2text](./dataflow2text) package and the [clamp](./clamp) package, respectively.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+- These two packages currently use two different Python versions.
+  The `dataflow2text` package relies on [the structural pattern matching feature introduced in Python 3.10](https://docs.python.org/3/whatsnew/3.10.html),
+  whereas the `clamp` package heavily relies on [PyTorch](https://pytorch.org/) and [🤗 Transformers](lhhhttps://huggingface.co/docs/transformers/index).
+- The clamp package is a simplified version of the code for [Semantic Parsing with Constrained LM](https://github.com/microsoft/semantic_parsing_with_constrained_lm/).
 
-## Trademarks
+To reproduce the SMCalFlow2Text results reported in the paper, please refer to the [worksheets](./worksheets/) folder.
+You will need to create two python virtual environments.
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+```bash
+conda env create --file=dataflow2text/environment.yml --name=dataflow2text_py310
+
+conda env create --file=clamp/environment.yml --name=clamp_py37
+```
+
+More details coming soon!
+
+## Citation
+
+If you use any source code or data included in this repo, please cite our paper.
+
+```bib
+@article{SMCalflow2Text2023,
+    title={The Whole Truth and Nothing But the Truth: Faithful and Controllable Dialogue Response Generation with Dataflow Transduction and Constrained Decoding}, 
+    author={Hao Fang and 
+      Anusha Balakrishnan and 
+      Harsh Jhamtani and 
+      John Bufe and 
+      Jean Crawford and 
+      Jayant Krishnamurthy and 
+      Adam Pauls and 
+      Jason Eisner and 
+      Jacob Andreas and 
+      Dan Klein},
+    booktitle = {Findings of the Association for Computational Linguistics: ACL 2023},
+    year={2023},
+}
+```

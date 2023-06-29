@@ -1,0 +1,10 @@
+# Pin click since newer versions are not compatible with black==21.12b0
+click==7.1.2
+black==21.12b0
+isort==4.3.21
+mypy==0.991
+pylint==2.12.2
+pytest==6.2.5
+pytest-xdist==2.5.0
+types-pytz==2022.7.0.0
+types-python-dateutil==2.8.19.5

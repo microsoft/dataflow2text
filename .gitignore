@@ -1,0 +1,22 @@
+# Mac
+.DS_Store
+
+# Python
+.mypy_cache/
+.pytest_cache/
+__pycache__/
+*.egg-info/
+
+# IntelliJ specific
+.idea/*
+.idea_modules
+
+# Built Vscode extensions
+*.vsix
+out/
+
+# Project specific
+/env/
+/scratch/
+
+/data/smcalflow2text/

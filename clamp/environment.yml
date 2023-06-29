@@ -1,0 +1,32 @@
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - conda-build=3.21.7
+  - pip=21.3
+  - pytorch=1.6.0
+  - sentencepiece=0.1.96
+  - scipy=1.7.3
+  - pip:
+    - -r "./requirements-dev.txt"
+    - blobfile==2.0.2
+    - cached-property==1.5.1
+    - cachetools==4.2.4
+    - datasets==2.12.0
+    - evaluate==0.4.0
+    - gem-metrics @ git+https://github.com/GEM-benchmark/GEM-metrics.git@8162210e73728c68f886cad6c09160694e3be9d9
+    - httpx==0.16.1
+    - importlib-resources==5.9.0
+    - jsons==1.6.1
+    - lark==1.1.2
+    - more_itertools==8.12.0
+    - pandas==1.3.5
+    - protobuf==3.19.4
+    - transformers==4.21.2
+    - typer==0.4.2
+    # The packages below are hosted on smpypi.
+    - --extra-index-url https://smpypi.z5.web.core.windows.net
+    - openfst-python==1.8.2
+    - whoosh==2.7.5
