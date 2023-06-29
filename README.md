@@ -16,7 +16,7 @@ implemented by the [dataflow2text](./dataflow2text) package and the [clamp](./cl
 
 - These two packages currently use two different Python versions.
   The `dataflow2text` package relies on [the structural pattern matching feature introduced in Python 3.10](https://docs.python.org/3/whatsnew/3.10.html),
-  whereas the `clamp` package heavily relies on [PyTorch](https://pytorch.org/) and [🤗 Transformers](lhhhttps://huggingface.co/docs/transformers/index).
+  whereas the `clamp` package heavily relies on [PyTorch](https://pytorch.org/) and [🤗 Transformers](https://huggingface.co/docs/transformers/index).
 - The clamp package is a simplified version of the code for [Semantic Parsing with Constrained LM](https://github.com/microsoft/semantic_parsing_with_constrained_lm/).
 
 To reproduce the SMCalFlow2Text results reported in the paper, please refer to the [worksheets](./worksheets/) folder.
