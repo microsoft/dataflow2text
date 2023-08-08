@@ -5,7 +5,7 @@
 <img align="right" src="https://avatars2.githubusercontent.com/u/9585815?s=200&v=4" width="18%">
 
 This repository contains code and instructions for reproducing the experiments in the paper
-[The Whole Truth and Nothing But the Truth: Faithful and Controllable Dialogue Response Generation with Dataflow Transduction and Constrained Decoding](https://arxiv.org/abs/2209.07800) (Findings of ACL 2023).
+[The Whole Truth and Nothing But the Truth: Faithful and Controllable Dialogue Response Generation with Dataflow Transduction and Constrained Decoding](https://arxiv.org/abs/2209.07800) (Findings of ACL 2023). [paper](https://aclanthology.org/2023.findings-acl.351/) [video](https://www.youtube.com/watch?v=m_yVepRYOyM&t=22s)
 
 ![Approach Overview](./assets/dataflow2text.png?raw=true)
 
