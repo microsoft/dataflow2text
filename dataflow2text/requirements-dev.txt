@@ -1,6 +1,6 @@
-# Pin click since newer versions are not compatible with black==21.12b0
+# Pin click since newer versions are not compatible with black==24.3.0
 click==7.1.2
-black==21.12b0
+black==24.3.0
 isort==4.3.21
 mypy==0.991
 pylint==2.12.2
